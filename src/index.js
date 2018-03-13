@@ -2,6 +2,11 @@ class SmartCalculator {
   constructor(initialValue) {
     // your implementation
     this.initialValue=initialValue;
+    var kot = Number(this.initialValue);
+    // this.two analogous
+    this.valueOf = function() {
+        return kot.valueOf();
+    }
   }
 
   add(number) {
