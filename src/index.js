@@ -3,7 +3,7 @@ class SmartCalculator {
     // your implementation
     this.initialValue=initialValue;
     var kot = Number(this.initialValue);
-    // this.two analogous
+
     this.valueOf = function() {
         return kot.valueOf();
     }
@@ -12,32 +12,57 @@ class SmartCalculator {
   add(number) {
     // your implementation
     this.initialValue+=number;
-      return this.initialValue;
+    var kot = Number(this.initialValue);
+
+    this.valueOf = function() {
+        return kot.valueOf();
+    }
+      return this;
   }
   
   subtract(number) {
     // your implementation
     this.initialValue-=number;
-    return this.initialValue;
-  }
+    var kot = Number(this.initialValue);
 
+    this.valueOf = function() {
+        return kot.valueOf();
+    }
+      return this;
+  }
+  
   multiply(number) {
     // your implementation
     this.initialValue*=number;
-    return this;
-  }
+    var kot = Number(this.initialValue);
 
+    this.valueOf = function() {
+        return kot.valueOf();
+    }
+      return this;
+  }
+  
   devide(number) {
     // your implementation
     this.initialValue/=number;
-    return this;
+    var kot = Number(this.initialValue);
+    this.valueOf = function() {
+        return kot.valueOf();
+    }
+      return this;
   }
-
+  
   pow(number) {
     // your implementation 
     this.initialValue=Math.pow(this.initialValue,number);
-    return this.initialValue;
+    var kot = Number(this.initialValue);
+
+    this.valueOf = function() {
+        return kot.valueOf();
+    }
+      return this;
   }
+  
 
 }
 
