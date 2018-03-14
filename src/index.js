@@ -2,18 +2,18 @@ class SmartCalculator {
   constructor(initialValue) {
     // your implementation
     this.initialValue=initialValue;
-    var kot = Number(this.initialValue);
-
-    this.valueOf = function() {
-        return kot.valueOf();
-    }
-  }
+    var mas = this.mas;
+    this.mas = [this.initialValue];
+    var k;
+    this.k = k;
+ }
 
   add(number) {
     // your implementation
-    this.initialValue+=number;
-    var kot = Number(this.initialValue);
-
+    this.mas.push("+"+number);
+    var str = this.mas.join('');
+    this.k=eval(str);
+    var kot = Number(this.k);
     this.valueOf = function() {
         return kot.valueOf();
     }
@@ -22,9 +22,10 @@ class SmartCalculator {
   
   subtract(number) {
     // your implementation
-    this.initialValue-=number;
-    var kot = Number(this.initialValue);
-
+    this.mas.push("-"+number);
+    var str = this.mas.join('');
+    this.k=eval(str);
+    var kot = Number(this.k);
     this.valueOf = function() {
         return kot.valueOf();
     }
@@ -33,9 +34,10 @@ class SmartCalculator {
   
   multiply(number) {
     // your implementation
-    this.initialValue*=number;
-    var kot = Number(this.initialValue);
-
+    this.mas.push("*"+number);
+    var str = this.mas.join('');
+    this.k=eval(str);
+    var kot = Number(this.k);
     this.valueOf = function() {
         return kot.valueOf();
     }
@@ -44,8 +46,10 @@ class SmartCalculator {
   
   devide(number) {
     // your implementation
-    this.initialValue/=number;
-    var kot = Number(this.initialValue);
+    this.mas.push("/"+number);
+    var str = this.mas.join('');
+    this.k=eval(str);
+    var kot = Number(this.k);
     this.valueOf = function() {
         return kot.valueOf();
     }
@@ -54,16 +58,15 @@ class SmartCalculator {
   
   pow(number) {
     // your implementation 
-    this.initialValue=Math.pow(this.initialValue,number);
-    var kot = Number(this.initialValue);
-
+    this.mas.push("**"+number);
+    var str = this.mas.join('');
+    this.k=eval(str);
+    var kot = Number(this.k);
     this.valueOf = function() {
         return kot.valueOf();
     }
       return this;
   }
-  
 
 }
-
 module.exports = SmartCalculator;
